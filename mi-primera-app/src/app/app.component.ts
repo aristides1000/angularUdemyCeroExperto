@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
-@Component({
+@Component({ /* El @ indica que estamos en presencia de un decorador */
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mi-primera-app';
+  titulo = 'Hola Mundo desde Angular';
 }
