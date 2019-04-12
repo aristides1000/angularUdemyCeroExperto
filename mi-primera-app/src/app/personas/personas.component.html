@@ -1,0 +1,36 @@
+<!-- Se pueden aplicar los estilos también dentro de nuestro archivo html -->
+
+<!-- vamos a procer a hacer uso de los estilos de bootstrap -->
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <label>Título Persona</label>
+      <!-- <input type="text" class="form-control" (input)="onModificarPersona($event)"> --><!-- Aquí en esta etiqueta capturamos el evento input y este evento se ejecuta cada ves que hacemos uso escribamos un caracter-->
+      <input type="text" class="form-control" [(ngModel)]="tituloPersona">
+      {{tituloPersona}}
+      <h1>Listado de Personas</h1>
+
+      <!-- Esta parte es para aplicar Property Binding -->
+
+      <button class="btn btn-primary" [disabled]="!agregarPersona" (click)= "onCrearPersona()">Agregar Persona</button> <!-- Con este evento le decimos a nuestro código lo que debemos hacer -->
+      <p>{{agregarPersonaStatus}}</p>
+      <!-- Al colocarle el signo de exclamación ! delante del property binding estamos negando a agregarPersona -->
+      <!-- fin de la parte de Property Binding -->
+
+      <app-persona></app-persona>
+
+      <!-- Aquí puedo agregar una nueva etiqueta y hasta puedo repetir módulos -->
+
+      <!-- <app-persona></app-persona> -->
+    </div>
+  </div>
+</div>
+
+<!-- <h1>Listado de Personas</h1>
+<app-persona></app-persona>
+ -->
+<!-- Aquí puedo agregar una nueva etiqueta y hasta puedo repetir módulos -->
+
+<!-- <app-persona></app-persona>
+ -->

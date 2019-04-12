@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mi-primera-app": {
+    "mi-calculadora": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mi-primera-app",
+            "outputPath": "dist/mi-calculadora",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,14 +23,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.slim.min.js",
-              "node_modules/popper.js/dist/umd/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ],
+            "scripts": [],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -63,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mi-primera-app:build"
+            "browserTarget": "mi-calculadora:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mi-primera-app:build:production"
+              "browserTarget": "mi-calculadora:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mi-primera-app:build"
+            "browserTarget": "mi-calculadora:build"
           }
         },
         "test": {
@@ -108,7 +103,7 @@
         }
       }
     },
-    "mi-primera-app-e2e": {
+    "mi-calculadora-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -117,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "mi-primera-app:serve"
+            "devServerTarget": "mi-calculadora:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "mi-primera-app:serve:production"
+              "devServerTarget": "mi-calculadora:serve:production"
             }
           }
         },
@@ -137,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "mi-primera-app"
+  "defaultProject": "mi-calculadora"
 }
