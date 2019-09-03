@@ -9,7 +9,16 @@ export class CalculadoraComponent implements OnInit {
 
   title = 'Aplicación de Calculadora';
 
-  constructor() { }
+  efectuarSuma = true;
+
+  constructor() {
+    const efectuarSuma = false;
+    if (efectuarSuma === false) {
+      this.efectuarSuma = true;
+    } else {
+      this.efectuarSuma = false;
+    }
+  }
 
   ngOnInit() {
   }

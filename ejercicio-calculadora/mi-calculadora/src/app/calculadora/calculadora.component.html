@@ -1,3 +1,14 @@
 <!-- <p>calculadora works!</p> -->
-
-<h1>{{ title }}</h1>
+<div class="container">
+    <h1>{{ title }}</h1>
+    <div class="form-group">
+        <label for="a">Operando A:</label>
+        <input type="number" class="form-control" id="a" placeholder="coloca el operando A">
+      </div>
+      <div class="form-group">
+        <label for="b">Operando B:</label>
+        <input type="number" class="form-control" id="b" placeholder="coloca el operando B">
+      </div>
+    <button class="btn btn-primary" [disabled]="!efectuarSuma">Sumar</button> <!-- con el ! de !efectuarSuma invertimos la lógica -->
+    <p>Resultado: </p>
+</div>
