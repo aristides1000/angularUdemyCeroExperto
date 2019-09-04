@@ -3,12 +3,12 @@
     <h1>{{ title }}</h1>
     <div class="form-group">
         <label for="a">Operando A:</label>
-        <input type="number" class="form-control" id="a" placeholder="coloca el operando A">
+        <input type="number" class="form-control" id="a" placeholder="coloca el operando A" [(ngModel)]="OperandoA" (input)="onCapturaOperandoA()" required>
       </div>
       <div class="form-group">
         <label for="b">Operando B:</label>
-        <input type="number" class="form-control" id="b" placeholder="coloca el operando B">
+        <input type="number" class="form-control" id="b" placeholder="coloca el operando B" [(ngModel)]="OperandoB" (input)="onCapturaOperandoB()" required>
       </div>
-    <button class="btn btn-primary" [disabled]="!efectuarSuma">Sumar</button> <!-- con el ! de !efectuarSuma invertimos la lógica -->
-    <p>Resultado: </p>
+    <button class="btn btn-primary" [disabled]="!efectuarSuma" (click)="onSumar()">Sumar</button> <!-- con el ! de !efectuarSuma invertimos la lógica --> <!-- importante, en los enventos a las fuinciones hay que colocarle los paréntesis abriendo y cerrando -->
+    <p>Resultado: {{ mensajeSuma }}</p>
 </div>
