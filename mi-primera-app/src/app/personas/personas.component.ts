@@ -47,7 +47,7 @@ export class PersonasComponent {
             /* Así que con lo que acabamos de ver aquí ya estamos trabajando con nuestro concepto de Property Binding */
     }
 
-    onCrearPersona(){
+    onCrearPersona() {
         this.personaCreada = true;
         this.agregarPersonaStatus = 'Persona agregada'; /* vscode muestra un error al colocar "Persona agregada" con comillas dobles */
         /* es por ello que debemos colocar 'Persona agregada' con comillas simples para que no nos salte este error */

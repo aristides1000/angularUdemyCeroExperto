@@ -14,7 +14,7 @@
       <!-- Esta parte es para aplicar Property Binding -->
 
       <button class="btn btn-primary" [disabled]="!agregarPersona" (click)= "onCrearPersona()">Agregar Persona</button> <!-- Con este evento le decimos a nuestro código lo que debemos hacer -->
-      <p *ngIf="personaCreada">{{agregarPersonaStatus}}</p>
+      <p *ngIf="personaCreada">{{agregarPersonaStatus}} con título de {{tituloPersona}}</p>
       <!-- Al colocarle el signo de exclamación ! delante del property binding estamos negando a agregarPersona -->
       <!-- fin de la parte de Property Binding -->
       <!-- personaCreada es u -->
