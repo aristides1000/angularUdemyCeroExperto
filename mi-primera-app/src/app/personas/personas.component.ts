@@ -32,6 +32,8 @@ export class PersonasComponent {
     /* Ahora bien, lo que se quiere es que dinámicamente el botón cambie de apariencia de deshabilitado a habilitado */
     
     tituloPersona = "Ingeniero"; /* POr aquí es por dónde nos traemos la información que desamos capturar esto me sirve para el desarrollo de la aplicación de la empresa */
+    
+    personaCreada = false;
 
     /* Es por ello que vamos a simular una acción dentro de nuestra clase personas component lo que vamos a crear es un constructor */
     constructor() {
@@ -46,12 +48,14 @@ export class PersonasComponent {
     }
 
     onCrearPersona(){
-        this.agregarPersonaStatus = "Persona agregada";
+        this.personaCreada = true;
+        this.agregarPersonaStatus = 'Persona agregada'; /* vscode muestra un error al colocar "Persona agregada" con comillas dobles */
+        /* es por ello que debemos colocar 'Persona agregada' con comillas simples para que no nos salte este error */
     }
 
     /* El siguente método es el que transcribe todo los que copiamos en un input */
 
-    onModificarPersona(event: Event){
+    onModificarPersona(event: Event) {
         this.tituloPersona = (<HTMLInputElement>event.target).value;
     }
 }
