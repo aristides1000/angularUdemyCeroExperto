@@ -6,15 +6,22 @@
   <div class="row">
     <div class="col">
       <label>Título Persona</label>
-      <!-- <input type="text" class="form-control" (input)="onModificarPersona($event)"> --><!-- Aquí en esta etiqueta capturamos el evento input y este evento se ejecuta cada ves que hacemos uso escribamos un caracter-->
+      <!-- <input type="text" class="form-control" (input)="onModificarPersona($event)"> -->
+      <!-- Aquí en esta etiqueta capturamos el evento input y este evento se ejecuta cada ves que hacemos uso escribamos un caracter-->
       <input type="text" class="form-control" [(ngModel)]="tituloPersona">
       {{tituloPersona}}
       <h1>Listado de Personas</h1>
 
       <!-- Esta parte es para aplicar Property Binding -->
 
-      <button class="btn btn-primary" [disabled]="!agregarPersona" (click)= "onCrearPersona()">Agregar Persona</button> <!-- Con este evento le decimos a nuestro código lo que debemos hacer -->
-      <p *ngIf="personaCreada">{{agregarPersonaStatus}} con título de {{tituloPersona}}</p>
+      <button class="btn btn-primary" [disabled]="!agregarPersona" (click)="onCrearPersona()">Agregar Persona</button>
+      <!-- Con este evento le decimos a nuestro código lo que debemos hacer -->
+      <p *ngIf="personaCreada; else sinPersona">{{agregarPersonaStatus}} con título de {{tituloPersona}}</p>
+      <!-- luego de colocar el *ngIf y su else procedemos a crear una nueva sección de la siguiente forma -->
+      <ng-template #sinPersona>
+        <p>No se ha agregado ninguna persona</p>
+      </ng-template>
+
       <!-- Al colocarle el signo de exclamación ! delante del property binding estamos negando a agregarPersona -->
       <!-- fin de la parte de Property Binding -->
       <!-- personaCreada es u -->
